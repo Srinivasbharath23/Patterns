@@ -1,0 +1,13 @@
+s=input().strip()
+midpoint=len(s)//2
+l=[]
+spacer=' '
+gap=len(s)-2
+for i in range(midpoint):
+    l.append(spacer*i + s[i] + spacer*gap + s[-(i+1)] + spacer*i)
+    gap-=2
+for line in l:
+    print(line)
+print(spacer*midpoint + s[midpoint] + spacer*midpoint)
+for line in l[::-1]:
+    print(line)
